@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personnel"
+version = "0.1.0"
+description = "Vault OS Day 18 — facility personnel registry (employees, visitors, contractors) with CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Vault OS" }]
+keywords = ["personnel", "registry", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["personnel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
