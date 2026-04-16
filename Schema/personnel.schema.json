@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./personnel.schema.json",
+  "title": "PersonnelRecord",
+  "description": "Any supported personnel record in the Personnel registry package.",
+  "oneOf": [
+    {
+      "$ref": "./employee.schema.json"
+    },
+    {
+      "$ref": "./visitor.schema.json"
+    },
+    {
+      "$ref": "./contractor.schema.json"
+    }
+  ]
+}

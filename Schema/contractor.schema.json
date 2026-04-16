@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./contractor.schema.json",
+  "title": "Contractor",
+  "description": "Contractor record for the Personnel registry package.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "unique_id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "contact_info": { "type": "string", "minLength": 1 },
+    "on_site": { "type": "boolean", "default": false },
+    "checked_in_at": { "type": ["string", "null"], "format": "date-time", "default": null },
+    "location": { "type": ["string", "null"], "default": null },
+    "company_name": { "type": "string", "minLength": 1 },
+    "contract_start_date": { "type": "string", "format": "date" },
+    "contract_end_date": { "type": "string", "format": "date" },
+    "restricted_areas": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "default": []
+    }
+  },
+  "required": [
+    "unique_id",
+    "name",
+    "contact_info",
+    "company_name",
+    "contract_start_date",
+    "contract_end_date"
+  ]
+}

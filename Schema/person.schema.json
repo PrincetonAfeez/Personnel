@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./person.schema.json",
+  "title": "Person",
+  "description": "Base personnel record for the Personnel registry package.",
+  "type": "object",
+  "properties": {
+    "unique_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for the person."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name of the person."
+    },
+    "contact_info": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Contact details such as email or phone."
+    },
+    "on_site": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the person is currently on-site."
+    },
+    "checked_in_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "default": null,
+      "description": "ISO 8601 timestamp for the current or restored check-in time."
+    },
+    "location": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "Current on-site location, if known."
+    }
+  },
+  "required": ["unique_id", "name", "contact_info"]
+}
