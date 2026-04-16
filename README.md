@@ -1,4 +1,4 @@
-# Vault OS — Personnel (Day 18)
+# Vault OS — Personnel
 
 **Secure facility management simulator — employee, visitor, and contractor registry.**
 
@@ -6,7 +6,7 @@ Language: **Python** (standard library only at runtime).
 
 ## Overview
 
-Vault OS is a class-based simulation of a secure facility (museum, data center, bank vault, and so on). Across Days 15–21, each app adds a subsystem. **Personnel (Day 18)** is the registry: who is known to the facility, who is on-site, and rules that differ by person type.
+Vault OS is a class-based simulation of a secure facility (museum, data center, bank vault, and so on). 
 
 The design focus is **OOP**: a shared `Person` base, specialized subclasses, and a **`PersonnelRegistry`** that keeps both the full directory and the live on-site roster.
 
