@@ -1,0 +1,4 @@
+# Runtime: personnel uses the Python standard library only.
+
+# Development / tests
+pytest>=8.0
